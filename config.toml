@@ -1,0 +1,225 @@
+main.name = "drdoom"
+main.lang = "ru"
+main.whitelist = ["kyoto",]
+main.confd = "/etc/pwnagotchi/conf.d/"
+main.custom_plugin_repos = [
+ "https://github.com/jayofelony/pwnagotchi-torch-plugins/archive/master.zip",
+ "https://github.com/Sniffleupagus/pwnagotchi_plugins/archive/master.zip",
+ "https://github.com/NeonLightning/pwny/archive/master.zip",
+ "https://github.com/marbasec/UPSLite_Plugin_1_3/archive/master.zip",
+ "https://github.com/wpa-2/Pwnagotchi-Plugins/archive/master.zip",
+ "https://github.com/evilsocket/pwnagotchi-plugins-contrib/archive/refs/heads/master.zip",
+]
+main.custom_plugins = "/usr/local/share/pwnagotchi/custom-plugins/"
+main.plugins.auto-tune.enabled = true
+main.plugins.auto-tune.show_hidden = false
+main.plugins.auto-tune.reset_history = true
+main.plugins.auto-tune.extra_channels = 15
+
+main.plugins.display-password-kyoto.enabled = true
+main.plugins.display-password-kyoto.files = [ "/home/pi/handshakes/wpa-sec.cracked.potfile",]
+main.plugins.display-password-kyoto.saving_path = "/home/pi/handshakes/cracked.txt"
+
+main.plugins.memtemp-plus.enabled = true
+main.plugins.memtemp-plus.scale = "celsius"
+main.plugins.memtemp-plus.orientation = "horizontal"
+main.plugins.memtemp-plus.fields = "cpu,freq,mem,temp"
+main.plugins.memtemp-plus.position = "170,83"
+main.plugins.memtemp-plus.linespacing = 12
+
+main.plugins.exp.enabled = true
+main.plugins.exp.lvl_x_coord = 149
+main.plugins.exp.lvl_y_coord = 69
+main.plugins.exp.exp_x_coord = 187
+main.plugins.exp.exp_y_coord = 69
+main.plugins.exp.bar_symbols_count = 8
+
+main.plugins.auto-update.enabled = true
+main.plugins.auto-update.install = true
+main.plugins.auto-update.interval = 1
+
+main.plugins.bt-tether.enabled = false
+main.plugins.bt-tether.phone-name = ""
+main.plugins.bt-tether.mac = ""
+main.plugins.bt-tether.phone = ""
+main.plugins.bt-tether.ip = ""
+
+main.plugins.fix_services.enabled = true
+
+main.plugins.gdrivesync.enabled = false
+main.plugins.gdrivesync.backupfiles = [ "",]
+main.plugins.gdrivesync.backup_folder = "PwnagotchiBackups"
+
+main.plugins.gpio_buttons.enabled = false
+
+main.plugins.gps.enabled = false
+main.plugins.gps.speed = 19200
+main.plugins.gps.device = "/dev/ttyUSB0"
+
+main.plugins.gps_listener.enabled = false
+
+main.plugins.grid.enabled = true
+main.plugins.grid.report = true
+
+main.plugins.logtail.enabled = false
+main.plugins.logtail.max-lines = 10000
+
+main.plugins.memtemp.enabled = false
+main.plugins.memtemp.scale = "celsius"
+main.plugins.memtemp.orientation = "horizontal"
+
+main.plugins.ohcapi.enabled = false
+main.plugins.ohcapi.api_key = "sk_your_api_key_here"
+main.plugins.ohcapi.receive_email = "yes"
+
+main.plugins.pwndroid.enabled = false
+main.plugins.pwndroid.display = false
+main.plugins.pwndroid.display_altitude = false
+
+main.plugins.pisugarx.enabled = false
+main.plugins.pisugarx.rotation = false
+main.plugins.pisugarx.default_display = "percentage"
+
+main.plugins.session-stats.enabled = true
+main.plugins.session-stats.save_directory = "/var/tmp/pwnagotchi/sessions/"
+
+main.plugins.ups_hat_c.enabled = false
+main.plugins.ups_hat_c.label_on = true
+main.plugins.ups_hat_c.shutdown = 5
+main.plugins.ups_hat_c.bat_x_coord = 140
+main.plugins.ups_hat_c.bat_y_coord = 0
+
+main.plugins.ups_lite.enabled = false
+main.plugins.ups_lite.shutdown = 2
+
+main.plugins.webcfg.enabled = true
+
+main.plugins.webgpsmap.enabled = false
+
+main.plugins.wigle.enabled = false
+main.plugins.wigle.api_key = ""
+main.plugins.wigle.donate = false
+
+main.plugins.wpa-sec.enabled = true
+main.plugins.wpa-sec.api_key = "93c9ed6b220eddce80d2b0a4ff024885"
+main.plugins.wpa-sec.api_url = "https://wpa-sec.stanev.org"
+main.plugins.wpa-sec.download_results = true
+main.plugins.wpa-sec.show_pwd = false
+
+main.plugins.aircrackonly.enabled = true
+main.plugins.aircrackonly.face = "(>.<)"
+
+main.plugins.upslite_plugin_1_3.enabled = true
+
+main.plugin.gdrivesync.interval = 1
+
+main.iface = "wlan0mon"
+main.mon_start_cmd = "/usr/bin/monstart"
+main.mon_stop_cmd = "/usr/bin/monstop"
+main.mon_max_blind_epochs = 5
+main.no_restart = false
+main.log.path = "/etc/pwnagotchi/log/pwnagotchi.log"
+main.log.path-debug = "/etc/pwnagotchi/log/pwnagotchi-debug.log"
+main.log.rotation.enabled = true
+main.log.rotation.size = "10M"
+
+personality.advertise = true
+personality.deauth = true
+personality.associate = true
+personality.channels = []
+personality.min_rssi = -200
+personality.ap_ttl = 120
+personality.sta_ttl = 300
+personality.recon_time = 30
+personality.max_inactive_scale = 2
+personality.recon_inactive_multiplier = 2
+personality.hop_recon_time = 10
+personality.min_recon_time = 5
+personality.max_interactions = 3
+personality.max_misses_for_recon = 5
+personality.excited_num_epochs = 10
+personality.bored_num_epochs = 15
+personality.sad_num_epochs = 25
+personality.bond_encounters_factor = 20000
+personality.throttle_a = 0.4
+personality.throttle_d = 0.9
+
+ui.invert = true
+ui.cursor = true
+ui.fps = 1.0
+ui.font.name = "DejaVuSansMono"
+ui.font.size_offset = 0
+
+ui.faces.look_r = "/custom-faces/LOOK_R.png"
+ui.faces.look_l = "/custom-faces/LOOK_L.png"
+ui.faces.look_r_happy = "/custom-faces/LOOK_R_HAPPY.png"
+ui.faces.look_l_happy = "/custom-faces/LOOK_L_HAPPY.png"
+ui.faces.sleep = "/custom-faces/SLEEP.png"
+ui.faces.sleep2 = "/custom-faces/SLEEP2.png"
+ui.faces.awake = "/custom-faces/AWAKE.png"
+ui.faces.bored = "/custom-faces/BORED.png"
+ui.faces.intense = "/custom-faces/INTENSE.png"
+ui.faces.cool = "/custom-faces/COOL.png"
+ui.faces.happy = "/custom-faces/HAPPY.png"
+ui.faces.excited = "/custom-faces/EXCITED.png"
+ui.faces.grateful = "/custom-faces/GRATEFUL.png"
+ui.faces.motivated = "/custom-faces/MOTIVATED.png"
+ui.faces.demotivated = "/custom-faces/DEMOTIVATED.png"
+ui.faces.smart = "/custom-faces/SMART.png"
+ui.faces.lonely = "/custom-faces/LONELY.png"
+ui.faces.sad = "/custom-faces/SAD.png"
+ui.faces.angry = "/custom-faces/ANGRY.png"
+ui.faces.friend = "/custom-faces/FRIEND.png"
+ui.faces.broken = "/custom-faces/BROKEN.png"
+ui.faces.debug = "/custom-faces/DEBUG.png"
+ui.faces.upload = "/custom-faces/UPLOAD.png"
+ui.faces.upload1 = "/custom-faces/UPLOAD1.png"
+ui.faces.upload2 = "/custom-faces/UPLOAD2.png"
+ui.faces.png = true
+ui.faces.position_x = 0
+ui.faces.position_y = 34
+
+ui.web.enabled = true
+ui.web.address = "::"
+ui.web.auth = false
+ui.web.username = "changeme"
+ui.web.password = "changeme"
+ui.web.origin = ""
+ui.web.port = 8080
+ui.web.on_frame = ""
+
+ui.display.enabled = true
+ui.display.rotation = 180
+ui.display.type = "waveshare_4"
+
+bettercap.handshakes = "/home/pi/handshakes"
+bettercap.silence = [
+ "ble.device.new",
+ "ble.device.lost",
+ "ble.device.disconnected",
+ "ble.device.connected",
+ "ble.device.service.discovered",
+ "ble.device.characteristic.discovered",
+ "wifi.client.new",
+ "wifi.client.lost",
+ "wifi.client.probe",
+ "wifi.ap.new",
+ "wifi.ap.lost",
+ "mod.started",
+]
+
+fs.memory.enabled = true
+fs.memory.mounts.log.enabled = true
+fs.memory.mounts.log.mount = "/etc/pwnagotchi/log/"
+fs.memory.mounts.log.size = "50M"
+fs.memory.mounts.log.sync = 60
+fs.memory.mounts.log.zram = true
+fs.memory.mounts.log.rsync = true
+
+fs.memory.mounts.data.enabled = true
+fs.memory.mounts.data.mount = "/var/tmp/pwnagotchi"
+fs.memory.mounts.data.size = "10M"
+fs.memory.mounts.data.sync = 3600
+fs.memory.mounts.data.zram = true
+fs.memory.mounts.data.rsync = true
+
